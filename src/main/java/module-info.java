@@ -2,6 +2,7 @@ module com.example.kanbanboardsystem {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.sql;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -10,7 +11,9 @@ module com.example.kanbanboardsystem {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    opens com.example.kanbanboardsystem.model to javafx.fxml;
 
     opens com.example.kanbanboardsystem to javafx.fxml;
     exports com.example.kanbanboardsystem;
+    exports com.example.kanbanboardsystem.model;
 }
